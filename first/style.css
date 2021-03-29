@@ -1,0 +1,200 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Bebas Neue", cursive;
+  background: rgb(36, 41, 54);
+  transition: background 0.2s linear;
+}
+
+body.white {
+  background-color: rgb(253, 233, 220);
+}
+body.white h1 {
+  color: white;
+  text-shadow: -2px -2px 2px rgb(103, 135, 167), 3px 3px 2px rgb(206, 120, 120);
+}
+
+.contact.white {
+  background-color: white;
+}
+
+/* 헤더 */
+#logo {
+  font-family: "Bebas Neue", cursive;
+  text-decoration: none;
+}
+.main-head {
+  position: sticky;
+  box-shadow: 0 10px 10px -2px rgba(0, 0, 0, 0.2);
+  top: 0;
+}
+.main-head img {
+  height: 4rem;
+}
+nav {
+  width: 80%;
+  min-height: 10vh;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgb(233, 233, 233);
+  padding: 1rem 1rem 1rem;
+  margin: auto;
+}
+/* 하얀색으로 */
+/* nav h1 {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  background: rgb(36, 41, 54);
+  text-shadow: -3px -3px 2px rgb(49, 60, 71), 3px 3px 2px black;
+  box-shadow: -3px -3px 2px rgb(49, 60, 71), 3px 3px 2px black;
+  cursor: pointer;
+  padding-left: 2%;
+  padding-right: 2%;
+  border-radius: 20px;
+} */
+/* nav h1:hover {
+  box-shadow: 3px 3px 2px rgb(49, 60, 71), -3px -3px 2px black;
+} */
+/* 하얀색으로 */
+/* .burger {
+  border-radius: 10px;
+  background: rgb(36, 41, 54);
+  box-shadow: -3px -3px 2px rgb(49, 60, 71), 3px 3px 2px black;
+  padding: 2px;
+}
+.burger:hover {
+  box-shadow: 3px 3px 2px rgb(49, 60, 71), -3px -3px 2px black;
+}
+.line1,
+.line2,
+.line3 {
+  border-radius: 20px;
+  width: 3.2rem;
+  height: 0.3rem;
+  margin: 0.3rem;
+  background: rgb(212, 215, 224);
+  pointer-events: none;
+  box-shadow: -3px -3px 2px rgb(46, 54, 63), 3px 3px 2px black;
+} */
+
+/* 메인  */
+/* 하얀색으로 */
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  margin-top: 7rem;
+  color: rgb(36, 41, 54);
+}
+.box h1 {
+  font-size: 10rem;
+  text-shadow: -3px -3px 2px rgb(46, 54, 63), 3px 3px 2px black;
+}
+
+/* 하얀색으로 */
+.contact {
+  font-size: 3rem;
+  width: 30rem;
+  border-radius: 10px;
+  background-color: rgb(36, 41, 54);
+  box-shadow: -3px -3px 2px rgb(46, 54, 63), 3px 3px 2px black;
+  text-shadow: -3px -3px 2px rgb(46, 54, 63), 3px 3px 2px black;
+  cursor: pointer;
+}
+.contact:hover {
+  box-shadow: -3px -3px 2px black, 3px 3px 2px rgb(46, 54, 63);
+  text-shadow: -3px -3px 2px black, 3px 3px 2px rgb(46, 54, 63);
+  transition: all 0.4s ease-in-out;
+}
+.burger {
+  cursor: pointer;
+}
+
+.cursor {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 0.8s ease;
+  transition-property: background, transform;
+  transform-origin: 100% 100%;
+  z-index: 5;
+}
+.cursor.burger-active {
+  background: linear-gradient(
+    0deg,
+    rgb(254, 254, 255) 0%,
+    rgb(111, 134, 127) 100%
+  );
+  transform: scale(1.5);
+  opacity: 0.5;
+}
+.sun {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  left: 35vw;
+}
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox:checked + .label .ball {
+  background-color: rgb(174, 248, 113);
+  transform: translateX(26px);
+}
+/* 하얀색으로 */
+.label {
+  background: rgb(22, 22, 22);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 50px;
+  padding: 5px;
+  height: 30px;
+  width: 60px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.fa-moon {
+  color: #f1c40f;
+}
+.fa-sun {
+  color: #f39c12;
+}
+.ball {
+  background-color: rgb(174, 248, 113);
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  left: 5.7px;
+  top: 2.5px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+  cursor: pointer;
+}
+.fa-snowflake {
+  color: white;
+  position: absolute;
+  top: -20px;
+  animation: fall 10s linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(98vh);
+  }
+}

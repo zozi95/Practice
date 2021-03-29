@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Bebas Neue", cursive;
+}
+
+.text {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 20vh;
+}
+
+.text h1 {
+  font-size: 4rem;
+  color: rgb(233, 202, 207);
+}
+
+i {
+  position: absolute;
+  top: -20px;
+  animation: fall 10s linear forwards;
+  color: rgb(245, 215, 227);
+}
+
+@keyframes fall {
+  from {
+    transfrom: translateX(-160px);
+  }
+
+  to {
+    transform: translateY(98vh) rotate(560deg) translateX(60px);
+  }
+}
